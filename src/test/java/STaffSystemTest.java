@@ -109,19 +109,21 @@ public class STaffSystemTest {
         staff.addEmployee(employee3);
         Employee employee4 = new Employee("Mia", "Johansson", 28, 4000);
         staff.addEmployee(employee4);
-        ArrayList<Employee> employeeArrayListTest = staff.employeesArrayList;
 
-        double increasePercentage = 0.02;
+        double increasePercentage = 1;
         staff.increaseEmployeesSalaries(increasePercentage);
 
-
+        ArrayList<Employee> employeeArrayListTest = staff.employeesArrayList;
         assertAll("employee salary",
+                ()-> assertTrue(increasePercentage <= 1 && increasePercentage >= 0 , "Increase  percentage should be between  0% to 100%"),
                 () -> assertEquals(6000 + ( 6000 * increasePercentage) , employeeArrayListTest.get(0).getMonthlySalary()),
                 () -> assertEquals(5000 + ( 5000 * increasePercentage) , employeeArrayListTest.get(1).getMonthlySalary()),
                 ()->  assertEquals(3000 + ( 3000 * increasePercentage) , employeeArrayListTest.get(2).getMonthlySalary()),
                 ()->  assertEquals(4000 + ( 4000 * increasePercentage) , employeeArrayListTest.get(3).getMonthlySalary())
+
         );
 
     }
+
 
 }
