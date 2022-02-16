@@ -24,4 +24,15 @@ public class StaffSystem {
         }
     }
 
+    public void increaseOneEmployeesSalary(int employeeCompanyId, double increasePercentage) {
+        if (increasePercentage >= 0 && increasePercentage <= 1){
+            for(int i = 0; i < employeesArrayList.size(); i++){
+                if(employeesArrayList.get(i).getCompanyId() == employeeCompanyId ){
+                    double currentSalary = employeesArrayList.get(i).getMonthlySalary();
+                    employeesArrayList.get(i).setMonthlySalary (currentSalary + (currentSalary * increasePercentage));
+
+                }
+            }
+        }
+    }
 }
