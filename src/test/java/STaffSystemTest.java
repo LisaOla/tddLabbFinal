@@ -1,5 +1,8 @@
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 public class STaffSystemTest {
 
@@ -15,6 +18,16 @@ public class STaffSystemTest {
         StaffSystem staff = new StaffSystem();
         Employee employee = new Employee();
         staff.addEmployee(employee);
+
+    }
+    @Test
+    void addNewEmployeeTest() {
+        StaffSystem staff = new StaffSystem();
+        Employee employee = new Employee("Nils", "Ericsson", 47);
+        staff.addEmployee(employee);
+        assertTrue(employee.getName().equals("Nils"));
+        assertTrue(employee.getLastName().equals("Ericsson"));
+        assertEquals(47, employee.getAge());
 
     }
 
