@@ -10,4 +10,12 @@ public class STaffSystemTest {
 
     }
 
+    @Test
+    void addEmployeeTest() {
+        StaffSystem staff = new StaffSystem();
+        Employee employee = new Employee();
+        staff.add(employee);
+
+    }
+
 }
