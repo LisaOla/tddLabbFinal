@@ -31,6 +31,6 @@ public class Employee {
     }
 
 
-    public void setName(String kalle) {
+    public void setName(String name) {
     }
 }
