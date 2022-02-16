@@ -31,4 +31,12 @@ public class STaffSystemTest {
 
     }
 
+    @Test
+    void setNameTest() {
+        Employee employee = new Employee();
+        employee.setName("Kalle");
+
+    }
+
+
 }
