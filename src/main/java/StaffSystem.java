@@ -18,7 +18,8 @@ public class StaffSystem {
     public void increaseEmployeesSalaries(double increasePercentage) {
         if (increasePercentage > 0 && increasePercentage <= 100){
             for(int i = 0; i < employeesArrayList.size(); i++){
-                employeesArrayList.get(i).setMonthlySalary (employeesArrayList.get(i).getMonthlySalary() + (employeesArrayList.get(i).getMonthlySalary() * increasePercentage));
+                double currentSalary = employeesArrayList.get(i).getMonthlySalary();
+                employeesArrayList.get(i).setMonthlySalary (currentSalary + (currentSalary * increasePercentage));
             }
         }
     }
