@@ -14,6 +14,10 @@ public class Employee {
         this.age = age;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
@@ -31,7 +35,5 @@ public class Employee {
     }
 
 
-    public void setName(String name) {
-        this.name = name;
-    }
+
 }
