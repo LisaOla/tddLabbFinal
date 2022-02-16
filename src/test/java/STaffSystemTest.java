@@ -38,6 +38,14 @@ public class STaffSystemTest {
 
     }
 
+    @Test
+    void getNameTest() {
+        Employee employee = new Employee();
+        employee.setName("Kalle");
+        assertTrue(employee.getName().equals("Kalle"));
+
+    }
+
 
 
 }
