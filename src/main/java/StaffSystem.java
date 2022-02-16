@@ -12,4 +12,8 @@ public class StaffSystem {
 
 
     }
+
+    public void clearEmployeesList() {
+        employeesArrayList.clear();
+    }
 }
