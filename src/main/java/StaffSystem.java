@@ -1,5 +1,5 @@
 
 public class StaffSystem {
-    public void add(Employee employee) {
+    public void addEmployee(Employee employee) {
     }
 }

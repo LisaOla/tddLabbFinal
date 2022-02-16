@@ -14,7 +14,7 @@ public class STaffSystemTest {
     void addEmployeeTest() {
         StaffSystem staff = new StaffSystem();
         Employee employee = new Employee();
-        staff.add(employee);
+        staff.addEmployee(employee);
 
     }
 
