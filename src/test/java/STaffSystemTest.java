@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -7,24 +8,23 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class STaffSystemTest {
 
-    @Test
-    void personalSystemetTest() {
+    StaffSystem staff;
+    Employee employee;
+    @BeforeEach
+    public void personalSystemetTest() {
 
-        StaffSystem staff = new StaffSystem();
-
+        staff = new StaffSystem();
+        employee = new Employee();
     }
 
     @Test
     void addEmployeeTest() {
-        StaffSystem staff = new StaffSystem();
-        Employee employee = new Employee();
         staff.addEmployee(employee);
-
     }
+
     @Test
     void addNewEmployeeTest() {
-        StaffSystem staff = new StaffSystem();
-        Employee employee = new Employee("Nils", "Ericsson", 47);
+        employee = new Employee("Nils", "Ericsson", 47);
         staff.addEmployee(employee);
         assertTrue(employee.getName().equals("Nils"));
         assertTrue(employee.getLastName().equals("Ericsson"));
@@ -34,23 +34,18 @@ public class STaffSystemTest {
 
     @Test
     void setNameTest() {
-        Employee employee = new Employee();
         employee.setName("Kalle");
-
     }
 
     @Test
     void getNameTest() {
-        Employee employee = new Employee();
         employee.setName("Kalle");
         assertTrue(employee.getName().equals("Kalle"));
-
     }
 
     @Test
     void setAndGetAllEmployeeDetailsTest() {
-        StaffSystem staff = new StaffSystem();
-        Employee employee = new Employee("Nils", "Ericsson", 47, 6000);
+        employee = new Employee("Nils", "Ericsson", 47, 6000);
         // Ett företags-ID skall genereras automatiskt när en anställd skapas i systemet.
         staff.addEmployee(employee);
 
@@ -65,7 +60,6 @@ public class STaffSystemTest {
 
     @Test
     void addEmloyeestoList() {
-        StaffSystem staff = new StaffSystem();
         Employee employee1 = new Employee("Nils", "Ericsson", 47, 6000);
         staff.addEmployee(employee1);
         Employee employee2 = new Employee("Tobias", "Gustafson", 50, 5000);
@@ -89,7 +83,6 @@ public class STaffSystemTest {
     }
     @Test
     void clearEmployeesList() {
-        StaffSystem staff = new StaffSystem();
         Employee employee1 = new Employee("Nils", "Ericsson", 47, 6000);
         staff.addEmployee(employee1);
         Employee employee2 = new Employee("Tobias", "Gustafson", 50, 5000);

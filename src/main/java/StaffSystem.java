@@ -9,8 +9,6 @@ public class StaffSystem {
         employee.setCompanyId(autoIncrementId);
         employeesArrayList.add(employee);
 
-
-
     }
 
     public void clearEmployeesList() {
