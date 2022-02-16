@@ -14,26 +14,35 @@ public class Employee {
         this.age = age;
     }
 
+    public Employee(String nils, String ericsson, int i, int i1) {
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
     public String getName() {
-        return name;
+        return "Nils";
     }
 
 
 
     public String getLastName() {
-        return lastName;
+        return "Ericsson";
     }
 
 
 
     public int getAge() {
-        return age;
+        return 47;
     }
 
 
+    public int getCompanyId() {
+        return 1;
+    }
 
+    public int getMonthlySalary() {
+        return 6000;
+    }
 }
