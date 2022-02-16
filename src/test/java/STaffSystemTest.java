@@ -99,5 +99,29 @@ public class STaffSystemTest {
 
 
     }
+    @Test
+    void increaseEmployeesSalariesTest() {
+        Employee employee1 = new Employee("Nils", "Ericsson", 47, 6000);
+        staff.addEmployee(employee1);
+        Employee employee2 = new Employee("Tobias", "Gustafson", 50, 5000);
+        staff.addEmployee(employee2);
+        Employee employee3 = new Employee("Anders", "Andersson", 22, 3000);
+        staff.addEmployee(employee3);
+        Employee employee4 = new Employee("Mia", "Johansson", 28, 4000);
+        staff.addEmployee(employee4);
+        ArrayList<Employee> employeeArrayListTest = staff.employeesArrayList;
+
+        double increasePercentage = 0.02;
+        staff.increaseEmployeesSalaries(increasePercentage);
+
+
+        assertAll("employee salary",
+                () -> assertEquals(6000 + ( 6000 * increasePercentage) , employeeArrayListTest.get(0).getMonthlySalary()),
+                () -> assertEquals(5000 + ( 5000 * increasePercentage) , employeeArrayListTest.get(1).getMonthlySalary()),
+                ()->  assertEquals(3000 + ( 3000 * increasePercentage) , employeeArrayListTest.get(2).getMonthlySalary()),
+                ()->  assertEquals(4000 + ( 4000 * increasePercentage) , employeeArrayListTest.get(3).getMonthlySalary())
+        );
+
+    }
 
 }
