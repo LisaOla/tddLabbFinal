@@ -46,6 +46,22 @@ public class STaffSystemTest {
 
     }
 
+    @Test
+    void setAndGetAllEmployeeDetailsTest() {
+        StaffSystem staff = new StaffSystem();
+        Employee employee = new Employee("Nils", "Ericsson", 47, 6000);
+        // Ett företags-ID skall genereras automatiskt när en anställd skapas i systemet.
+        staff.addEmployee(employee);
+
+        assertTrue(employee.getName().equals("Nils"));
+        assertTrue(employee.getLastName().equals("Ericsson"));
+        assertEquals(47, employee.getAge());
+        assertEquals(1, employee.getCompanyId());
+        assertEquals(6000, employee.getMonthlySalary());
+
+
+    }
+
 
 
 }
