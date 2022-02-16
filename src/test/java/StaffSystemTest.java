@@ -6,15 +6,23 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class STaffSystemTest {
+public class StaffSystemTest {
 
     StaffSystem staff;
     Employee employee;
+    Employee employee1;
+    Employee employee2;
+    Employee employee3;
+    Employee employee4;
     @BeforeEach
     public void personalSystemetTest() {
 
         staff = new StaffSystem();
         employee = new Employee();
+        employee1 = new Employee("Nils", "Ericsson", 47, 6000);
+        employee2 = new Employee("Tobias", "Gustafson", 50, 5000);
+        employee3 = new Employee("Anders", "Andersson", 22, 3000);
+        employee4 = new Employee("Mia", "Johansson", 28, 4000);
     }
 
     @Test
@@ -54,19 +62,13 @@ public class STaffSystemTest {
         assertEquals(47, employee.getAge());
         assertEquals(1, employee.getCompanyId());
         assertEquals(6000, employee.getMonthlySalary());
-
-
     }
 
     @Test
     void addEmloyeestoList() {
-        Employee employee1 = new Employee("Nils", "Ericsson", 47, 6000);
         staff.addEmployee(employee1);
-        Employee employee2 = new Employee("Tobias", "Gustafson", 50, 5000);
         staff.addEmployee(employee2);
-        Employee employee3 = new Employee("Anders", "Andersson", 22, 3000);
         staff.addEmployee(employee3);
-        Employee employee4 = new Employee("Mia", "Johansson", 28, 4000);
         staff.addEmployee(employee4);
 
         ArrayList<Employee> employeeArrayListTest = staff.employeesArrayList;
@@ -83,13 +85,9 @@ public class STaffSystemTest {
     }
     @Test
     void clearEmployeesList() {
-        Employee employee1 = new Employee("Nils", "Ericsson", 47, 6000);
         staff.addEmployee(employee1);
-        Employee employee2 = new Employee("Tobias", "Gustafson", 50, 5000);
         staff.addEmployee(employee2);
-        Employee employee3 = new Employee("Anders", "Andersson", 22, 3000);
         staff.addEmployee(employee3);
-        Employee employee4 = new Employee("Mia", "Johansson", 28, 4000);
         staff.addEmployee(employee4);
 
         ArrayList<Employee> employeeArrayListTest = staff.employeesArrayList;
@@ -101,13 +99,9 @@ public class STaffSystemTest {
     }
     @Test
     void increaseEmployeesSalariesTest() {
-        Employee employee1 = new Employee("Nils", "Ericsson", 47, 6000);
         staff.addEmployee(employee1);
-        Employee employee2 = new Employee("Tobias", "Gustafson", 50, 5000);
         staff.addEmployee(employee2);
-        Employee employee3 = new Employee("Anders", "Andersson", 22, 3000);
         staff.addEmployee(employee3);
-        Employee employee4 = new Employee("Mia", "Johansson", 28, 4000);
         staff.addEmployee(employee4);
 
         double increasePercentage = 1;
@@ -128,23 +122,19 @@ public class STaffSystemTest {
 
     @Test
     void increaseOneEmployeeSalaryTest() {
-        Employee employee1 = new Employee("Nils", "Ericsson", 47, 6000);
         staff.addEmployee(employee1);
-        Employee employee2 = new Employee("Tobias", "Gustafson", 50, 5000);
         staff.addEmployee(employee2);
-        Employee employee3 = new Employee("Anders", "Andersson", 22, 3000);
         staff.addEmployee(employee3);
-        Employee employee4 = new Employee("Mia", "Johansson", 28, 4000);
         staff.addEmployee(employee4);
 
         double increasePercentage = 0.05;
-        int employeeCompanyId = 2;
+        int employeeCompanyId = 3;
         staff.increaseOneEmployeesSalary(employeeCompanyId, increasePercentage);
 
         ArrayList<Employee> employeeArrayListTest = staff.employeesArrayList;
         assertAll("employee salary",
                 ()-> assertTrue(increasePercentage <= 1 && increasePercentage >= 0 , "Increase  percentage should be between  0% to 100%"),
-                () -> assertEquals(5000 + ( 5000 * increasePercentage) , employeeArrayListTest.get(1).getMonthlySalary())
+                () -> assertEquals(3000 + ( 3000 * increasePercentage) , employeeArrayListTest.get(2).getMonthlySalary())
         );
 
     }
