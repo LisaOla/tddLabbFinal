@@ -31,4 +31,6 @@ public class Employee {
     }
 
 
+    public void setName(String kalle) {
+    }
 }
