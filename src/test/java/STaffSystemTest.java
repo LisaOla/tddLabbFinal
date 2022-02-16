@@ -2,8 +2,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class STaffSystemTest {
@@ -78,11 +77,14 @@ public class STaffSystemTest {
 
         ArrayList<Employee> employeeArrayListTest = staff.employeesArrayList;
 
-        assertEquals("Nils", employeeArrayListTest.get(0).getName());
-        assertEquals("Gustafson", employeeArrayListTest.get(1).getLastName());
-        assertEquals(22, employeeArrayListTest.get(2).getAge());
-        assertEquals(4, employeeArrayListTest.get(3).getCompanyId());
-        assertEquals(4000, employeeArrayListTest.get(3).getMonthlySalary());
+        assertAll("employee name",
+             () -> assertEquals("Nils", employeeArrayListTest.get(0).getName()),
+             () -> assertEquals("Gustafson", employeeArrayListTest.get(1).getLastName()),
+             ()->  assertEquals(22, employeeArrayListTest.get(2).getAge()),
+             ()->  assertEquals(4, employeeArrayListTest.get(3).getCompanyId()),
+             ()->  assertEquals(4000, employeeArrayListTest.get(3).getMonthlySalary())
+        );
+
 
     }
 
