@@ -35,17 +35,13 @@ public class Employee {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+
 
     public int getAge() {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+
 
     public int getCompanyId() {
         return companyId;
