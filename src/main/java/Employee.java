@@ -58,4 +58,7 @@ public class Employee {
     public void setMonthlySalary(double monthlySalary) {
         this.monthlySalary = monthlySalary;
     }
+
+    public void setLastName(String andersson) {
+    }
 }
