@@ -56,10 +56,6 @@ public class StaffSystemTest {
         employee.setLastName("Andersson");
     }
 
-    @Test
-    void setAgeTest() {
-        employee.setAge(30);
-    }
 
 
 
