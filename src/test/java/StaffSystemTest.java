@@ -53,7 +53,9 @@ public class StaffSystemTest {
 
     @Test
     void setlastNameTest() {
+
         employee.setLastName("Andersson");
+        assertEquals("Andersson", employee.getLastName());
     }
 
 
@@ -61,6 +63,7 @@ public class StaffSystemTest {
     @Test
     void setAgeTest() {
         employee.setAge(30);
+        assertEquals(30,employee.getAge());
     }
 
     @Test
