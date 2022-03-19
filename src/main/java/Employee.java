@@ -59,6 +59,8 @@ public class Employee {
         this.monthlySalary = monthlySalary;
     }
 
-    public void setLastName(String andersson) {
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
+
 }

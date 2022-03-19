@@ -57,6 +57,13 @@ public class StaffSystemTest {
     }
 
     @Test
+    void setAgeTest() {
+        employee.setAge(30);
+    }
+
+
+
+    @Test
     void setAndGetAllEmployeeDetailsTest() {
         employee = new Employee("Nils", "Ericsson", 47, 6000);
         // Ett företags-ID skall genereras automatiskt när en anställd skapas i systemet.
