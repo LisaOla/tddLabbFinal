@@ -58,6 +58,10 @@ public class StaffSystemTest {
 
 
 
+    @Test
+    void setAgeTest() {
+        employee.setAge();
+    }
 
     @Test
     void setAndGetAllEmployeeDetailsTest() {
