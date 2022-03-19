@@ -60,7 +60,7 @@ public class StaffSystemTest {
 
     @Test
     void setAgeTest() {
-        employee.setAge();
+        employee.setAge(30);
     }
 
     @Test

@@ -63,4 +63,7 @@ public class Employee {
         this.lastName = lastName;
     }
 
+    public void setAge(int i) {
+
+    }
 }
