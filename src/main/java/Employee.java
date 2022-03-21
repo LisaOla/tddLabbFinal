@@ -3,7 +3,7 @@ public class Employee {
     String lastName;
     int age;
     int companyId;
-    static int autoIncementId = 0;
+    private static int autoIncrementId = 0;
     double monthlySalary;
 
 
@@ -21,9 +21,9 @@ public class Employee {
         this.name = name;
         this.lastName = lastName;
         this.age = age;
-        this.companyId = autoIncementId + 1;
+        this.companyId = autoIncrementId + 1;
         this.monthlySalary = monthlySalary;
-        ++autoIncementId;
+        ++autoIncrementId;
     }
 
     public String getName() {
@@ -38,21 +38,14 @@ public class Employee {
         return lastName;
     }
 
-
-
     public int getAge() {
         return age;
     }
-
-
 
     public int getCompanyId() {
         return companyId;
     }
 
-    public void setCompanyId(int companyId) {
-        this.companyId = companyId;
-    }
 
     public double getMonthlySalary() {
         return monthlySalary;

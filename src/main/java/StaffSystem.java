@@ -5,7 +5,6 @@ public class StaffSystem {
 
     public void addEmployee(Employee employee) {
         employeesArrayList.add(employee);
-
     }
 
     public void clearEmployeesList() {
