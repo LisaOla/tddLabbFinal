@@ -2,7 +2,8 @@ public class Employee {
     String name;
     String lastName;
     int age;
-    int companyId = 0;
+    int companyId;
+    static int autoIncementId = 0;
     double monthlySalary;
 
 
@@ -20,7 +21,9 @@ public class Employee {
         this.name = name;
         this.lastName = lastName;
         this.age = age;
+        this.companyId = autoIncementId + 1;
         this.monthlySalary = monthlySalary;
+        ++autoIncementId;
     }
 
     public String getName() {

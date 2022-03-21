@@ -45,7 +45,6 @@ public class StaffSystemTest {
 
         assertEquals(3 ,employee3.getCompanyId());
 
-        employee.setName("Kalle");
     }
     @Test
     void setNameTest() {
