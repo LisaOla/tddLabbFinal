@@ -2,7 +2,7 @@ public class Employee {
     String name;
     String lastName;
     int age;
-    int companyId;
+    int companyId = 0;
     double monthlySalary;
 
 

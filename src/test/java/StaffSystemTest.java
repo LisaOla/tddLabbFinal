@@ -41,6 +41,13 @@ public class StaffSystemTest {
     }
 
     @Test
+    void checkAutoIncementOnCompanyId() {
+
+        assertEquals(3 ,employee3.getCompanyId());
+
+        employee.setName("Kalle");
+    }
+    @Test
     void setNameTest() {
         employee.setName("Kalle");
     }
@@ -57,7 +64,6 @@ public class StaffSystemTest {
         employee.setLastName("Andersson");
         assertEquals("Andersson", employee.getLastName());
     }
-
 
 
     @Test
@@ -153,5 +159,6 @@ public class StaffSystemTest {
         );
 
     }
+
 
 }
